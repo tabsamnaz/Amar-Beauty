@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #6281dc;
+}
+nav {
+  background-color: #6281dc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.logo {
+  background-image: url("C:\Users\salted caramel\Downloads\Amarlogo.png");
+
+  width: 150px;
+  height: 40;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+nav a {
+  color: #e0bacf;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #e0bacf;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 15px;
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav a {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+  }
+}
